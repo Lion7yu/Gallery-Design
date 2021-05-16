@@ -1,0 +1,23 @@
+{
+  "name": "gallery",
+  "version": "0.0.1",
+  "description": "一个基于 Vue 的 UI 框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lion7yu/Gallery-Design.git"
+  },
+  "keywords": [
+    "Vue",
+    "UI"
+  ],
+  "author": "Lionyu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lion7yu/Gallery-Design/issues"
+  },
+  "homepage": "https://github.com/Lion7yu/Gallery-Design#readme"
+}
