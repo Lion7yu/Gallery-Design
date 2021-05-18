@@ -1,6 +1,6 @@
 {
   "name": "ylion-design",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "一个基于 Vue 的 UI 框架",
   "main": "dist/index.js",
   "scripts": {
