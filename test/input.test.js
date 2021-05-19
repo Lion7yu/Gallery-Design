@@ -69,9 +69,10 @@ describe('Input', () => { //it 用于隔离作用域
           vm.$on(eventName,callback)
           //触发 input 的 change 事件
           let event = new Event(eventName);//触发一个change事件之后，回调会被调用，参数为 event
+          Object.defineProperty(event,'target',{value:{value:'hi'},enumerable:true})
           let inputElement = vm.$el.querySelector('input')
           inputElement.dispatchEvent(event)
-          expect(callback).to.have.been.calledWith(event)
+          expect(callback).to.have.been.calledWith('hi')
         })
       })
     })

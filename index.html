@@ -53,6 +53,11 @@
         <div class="box">
             <g-input value="" error="用户名不能为空"></g-input>
         </div>
+        <div class="box">
+            <g-input v-model="message"></g-input>
+            <p>{{message}}</p>
+            <button @click="message+=1">+1</button>
+        </div>
         <div class="box" style="margin: 20px;">
             <g-button :loading="loading1" @click="loading1 = !loading1">fuck me</g-button>
             <g-button icon="settings" :loading="loading2" @click="loading2 =!loading2">
