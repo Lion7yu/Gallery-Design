@@ -6,6 +6,7 @@
 
 <script lang="ts">
 export default {
+  name:'LButtonGroup',
   mounted(){
     for (let node of this.$el.children){
       let name = node.nodeName.toLowerCase()

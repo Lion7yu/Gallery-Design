@@ -9,7 +9,7 @@
 使用本框架之前，请在 CSS 中开启 border-box
 
 ```
-*{box-sizing:border-box}
+*,*::before,*::after{box-sizing:border-box}
 ```
 ## 文档
 
