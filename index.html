@@ -48,23 +48,9 @@
     <div id="app">
         <div style="border: 1px solid red;">
             <g-row gutter="20">
-                <g-col>1</g-col>
-                <g-col>2</g-col>
-            </g-row>
-            <g-row gutter="20">
-                <g-col></g-col>
-                <g-col></g-col>
-                <g-col></g-col>
-            </g-row>
-            <g-row gutter="20">
-                <g-col></g-col>
-                <g-col></g-col>
-                <g-col></g-col>
-                <g-col></g-col>
-            </g-row>
-            <g-row gutter="20">
-                <g-col span="2">1</g-col>
-                <g-col span="20" offset="2">11</g-col>
+                <g-col span="2" :xs="{span:12}" :ms="{span:8}" :md="{span:4}" :lg="{span:2}" :xl="{span:1}">1</g-col>
+                <g-col span="22" :xs="{span:12,offset:0}" :ms="{span:16}" :md="{span:20}" :lg="{span:22}"
+                    :xl="{span:23}">11</g-col>
             </g-row>
             <g-row gutter="20">
                 <g-col span="4">1</g-col>
