@@ -14,6 +14,10 @@
             box-sizing: border-box
         }
 
+        img {
+            max-width: 100%;
+        }
+
         :root {
             --button-height: 32px;
             --font-size: 14px;
@@ -42,35 +46,37 @@
 
 <body>
     <div id="app">
-        <g-row gutter="20">
-            <g-col>1</g-col>
-            <g-col>2</g-col>
-        </g-row>
-        <g-row gutter="20">
-            <g-col></g-col>
-            <g-col></g-col>
-            <g-col></g-col>
-        </g-row>
-        <g-row gutter="20">
-            <g-col></g-col>
-            <g-col></g-col>
-            <g-col></g-col>
-            <g-col></g-col>
-        </g-row>
-        <g-row gutter="20">
-            <g-col span="2">1</g-col>
-            <g-col span="20" offset="2">11</g-col>
-        </g-row>
-        <g-row gutter="20">
-            <g-col span="4">1</g-col>
-            <g-col span="20">11</g-col>
-        </g-row>
-        <g-row gutter="20">
-            <g-col></g-col>
-            <g-col offset="1"></g-col>
-            <g-col offset="1"></g-col>
-            <g-col offset="1"></g-col>
-        </g-row>
+        <div style="border: 1px solid red;">
+            <g-row gutter="20">
+                <g-col>1</g-col>
+                <g-col>2</g-col>
+            </g-row>
+            <g-row gutter="20">
+                <g-col></g-col>
+                <g-col></g-col>
+                <g-col></g-col>
+            </g-row>
+            <g-row gutter="20">
+                <g-col></g-col>
+                <g-col></g-col>
+                <g-col></g-col>
+                <g-col></g-col>
+            </g-row>
+            <g-row gutter="20">
+                <g-col span="2">1</g-col>
+                <g-col span="20" offset="2">11</g-col>
+            </g-row>
+            <g-row gutter="20">
+                <g-col span="4">1</g-col>
+                <g-col span="20">11</g-col>
+            </g-row>
+            <g-row gutter="20">
+                <g-col></g-col>
+                <g-col offset="1"></g-col>
+                <g-col offset="1"></g-col>
+                <g-col offset="1"></g-col>
+            </g-row>
+        </div>
         <hr>
         <div class="box">
             <g-input value="奥特曼"></g-input>
