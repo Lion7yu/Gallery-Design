@@ -45,55 +45,34 @@
 </head>
 
 <body>
+    <style>
+        .demo {
+            background: #ddd;
+            border: 1px solid #666;
+            height: 100px;
+        }
+    </style>
     <div id="app">
-        <div style="border: 1px solid red;">
-            <g-row gutter="20">
-                <g-col span="2" :xs="{span:12}" :ms="{span:8}" :md="{span:4}" :lg="{span:2}" :xl="{span:1}">1</g-col>
-                <g-col span="22" :xs="{span:12,offset:0}" :ms="{span:16}" :md="{span:20}" :lg="{span:22}"
-                    :xl="{span:23}">11</g-col>
-            </g-row>
-            <g-row gutter="20">
-                <g-col span="4">1</g-col>
-                <g-col span="20">11</g-col>
-            </g-row>
-            <g-row gutter="20">
-                <g-col></g-col>
-                <g-col offset="1"></g-col>
-                <g-col offset="1"></g-col>
-                <g-col offset="1"></g-col>
-            </g-row>
-        </div>
-        <hr>
-        <div class="box">
-            <g-input value="奥特曼"></g-input>
-            <g-input value="迪迦" disabled></g-input>
-            <g-input value="艾斯" readonly></g-input>
-        </div>
-        <div class="box">
-            <g-input value="盖塔" @change="inputChange"></g-input>
-        </div>
-        <div class="box">
-            <g-input value="" error="用户名不能为空"></g-input>
-        </div>
-        <div class="box">
-            <g-input v-model="message"></g-input>
-            <p>{{message}}</p>
-            <button @click="message+=1">+1</button>
-        </div>
-        <div class="box" style="margin: 20px;">
-            <g-button :loading="loading1" @click="loading1 = !loading1">fuck me</g-button>
-            <g-button icon="settings" :loading="loading2" @click="loading2 =!loading2">
-                Settings
-            </g-button>
-            <g-button icon="settings" icon-position="right" :loading="true">
-                Settings
-            </g-button>
-            <g-button-group>
-                <g-button icon="left">上一页</g-button>
-                <g-button>目录</g-button>
-                <g-button icon="right" icon-position="right">下一页</g-button>
-            </g-button-group>
-        </div>
+        <g-row>
+            <g-col :xs="{span:24}" :ms="{span:12}" :md="{span:8}">
+                <div class="demo"></div>
+            </g-col>
+            <g-col :xs="{span:24}" :ms="{span:12}" :md="{span:8}">
+                <div class="demo"></div>
+            </g-col>
+            <g-col :xs="{span:24}" :ms="{span:12}" :md="{span:8}">
+                <div class="demo"></div>
+            </g-col>
+            <g-col :xs="{span:24}" :ms="{span:12}" :md="{span:8}">
+                <div class="demo"></div>
+            </g-col>
+            <g-col :xs="{span:24}" :ms="{span:12}" :md="{span:8}">
+                <div class="demo"></div>
+            </g-col>
+            <g-col :xs="{span:24}" :ms="{span:12}" :md="{span:8}">
+                <div class="demo"></div>
+            </g-col>
+        </g-row>
     </div>
     <script src="./src/app.js"></script>
     <script src="//at.alicdn.com/t/font_2553651_un8xiv4m12.js"></script>

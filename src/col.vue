@@ -51,16 +51,17 @@ export default {
   },
   computed:{
     colClass(){
-      let {span,offset,xs,ms,md,lg,xl} = this
+      let {span,offset,xs,ms,md,lg,xl,xxl} = this
       let phoneClass = []
       return [
         span && `col-${span}`,
         offset && `offset-${offset}`,
-        ...(xs && [`col-xs-${xs.span}`]),
-        ...(ms && [`col-ms-${ms.span}`]),
-        ...(md && [`col-md-${md.span}`]),
-        ...(lg && [`col-lg-${lg.span}`]),
-        ...(xl && [`col-xl-${xl.span}`]),
+        ...(xs ? [`col-xs-${xs.span}`]:[]),
+        ...(ms ? [`col-ms-${ms.span}`]:[]),
+        ...(md ? [`col-md-${md.span}`]:[]),
+        ...(lg ? [`col-lg-${lg.span}`]:[]),
+        ...(xl ? [`col-xl-${xl.span}`]:[]),
+        ...(xxl ? [`col-xl-${xxl.span}`]:[]),
         ]
     },
     colStyle(){
@@ -74,19 +75,6 @@ export default {
 </script>
 <style lang="scss" scoped>
   .col{
-    $class-prefix:col-; //声明一个class前缀
-    @for $n from 1 through 24 {
-      &.#{$class-prefix}#{$n}{ //插值语法
-        width: ($n/24)*100%;
-      }
-    }
-    $class-prefix:offset-; //声明一个class前缀
-    @for $n from 1 through 24 {
-      &.#{$class-prefix}#{$n}{ //插值语法
-        margin-left: ($n/24)*100%;
-      }
-    }
-    @media(max-width:576px){
     $class-prefix:col-xs-; //声明一个class前缀
     @for $n from 1 through 24 {
       &.#{$class-prefix}#{$n}{ //插值语法
@@ -97,10 +85,9 @@ export default {
     @for $n from 1 through 24 {
       &.#{$class-prefix}#{$n}{ //插值语法
         margin-left: ($n/24)*100%;
-        }
       }
     }
-    @media(min-width:576px) and (max-width:768px){
+    @media(min-width:577px){
     $class-prefix:col-sm-; //声明一个class前缀
     @for $n from 1 through 24 {
       &.#{$class-prefix}#{$n}{ //插值语法
@@ -114,7 +101,7 @@ export default {
         }
       }
     }
-    @media(min-width:768px) and (max-width:992px){
+    @media(min-width:769px){
     $class-prefix:col-md-; //声明一个class前缀
     @for $n from 1 through 24 {
       &.#{$class-prefix}#{$n}{ //插值语法
@@ -128,7 +115,7 @@ export default {
         }
       }
     }
-    @media(min-width:992px) and (max-width:1200px){
+    @media(min-width:993px){
     $class-prefix:col-lg-; //声明一个class前缀
     @for $n from 1 through 24 {
       &.#{$class-prefix}#{$n}{ //插值语法
@@ -150,6 +137,20 @@ export default {
       }
     }
     $class-prefix:offset-xl-; //声明一个class前缀
+    @for $n from 1 through 24 {
+      &.#{$class-prefix}#{$n}{ //插值语法
+        margin-left: ($n/24)*100%;
+        }
+      }
+    }
+    @media(min-width:1601px){
+    $class-prefix:col-xxl-; //声明一个class前缀
+    @for $n from 1 through 24 {
+      &.#{$class-prefix}#{$n}{ //插值语法
+        width: ($n/24)*100%;
+      }
+    }
+    $class-prefix:offset-xxl-; //声明一个class前缀
     @for $n from 1 through 24 {
       &.#{$class-prefix}#{$n}{ //插值语法
         margin-left: ($n/24)*100%;
