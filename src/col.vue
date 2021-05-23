@@ -27,7 +27,7 @@ export default {
       type:Object,
       validator,
     },
-    ms:{
+    sm:{
       type:Object,
       validator,
     },
@@ -49,19 +49,32 @@ export default {
       gutter:0,
     }
   },
+  methods:{
+    sizeClasses (obj,str=''){
+      if(!obj){return []}
+      let array = []
+      if(obj.span){
+        array.push(`col-${str}-${obj.span}`)
+      }
+      if(obj.offset){
+        array.push(`offset-${str}-${obj.offset}`)
+      }
+      return array
+      }
+    },
   computed:{
     colClass(){
-      let {span,offset,xs,ms,md,lg,xl,xxl} = this
-      let phoneClass = []
+      let {span,offset,xs,sm,md,lg,xl,xxl} = this
+      let sizeClasses = this.sizeClasses
       return [
         span && `col-${span}`,
         offset && `offset-${offset}`,
-        ...(xs ? [`col-xs-${xs.span}`]:[]),
-        ...(ms ? [`col-ms-${ms.span}`]:[]),
-        ...(md ? [`col-md-${md.span}`]:[]),
-        ...(lg ? [`col-lg-${lg.span}`]:[]),
-        ...(xl ? [`col-xl-${xl.span}`]:[]),
-        ...(xxl ? [`col-xl-${xxl.span}`]:[]),
+        ...sizeClasses(xs,'xs'),
+        ...sizeClasses(sm,'sm'),
+        ...sizeClasses(md,'md'),
+        ...sizeClasses(lg,'lg'),
+        ...sizeClasses(xl,'xl'),
+        ...sizeClasses(xxl,'xxl'),
         ]
     },
     colStyle(){
