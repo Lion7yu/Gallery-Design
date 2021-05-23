@@ -43,6 +43,10 @@ export default {
       type:Object,
       validator,
     },
+    xxl:{
+      type:Object,
+      validator,
+    }
   },
   data(){
     return{
