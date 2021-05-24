@@ -35,11 +35,13 @@ new Vue({
         message:'hi'
     },
     created(){
-
+        this.$toast('我是<strong>大帅逼</strong>',{
+            enableHtml:false
+        })
     },
     methods:{
         showToast(){
-            this.$toast('我是大帅逼')
+
         }
     }
 })
