@@ -40,7 +40,7 @@ new Vue({
     methods:{
         showToast(){
             this.$toast(`你是<strong>大帅逼</strong>?,帅气值为 ${parseInt(Math.random()*100)}`,{
-                position:'middle',
+                position:'bottom',
                 enableHtml:false,
                 closeButton:{
                     text:'我是',
