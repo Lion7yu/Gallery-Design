@@ -35,22 +35,22 @@ new Vue({
         message:'hi'
     },
     created(){
-        this.$toast('你是<strong>大帅逼</strong>？',{
-            position:'middle',
-            enableHtml:false,
-            closeButton:{
-                text:'我是',
-                callback(){
-                    console.log('两个大帅逼')
-                }
-            },
-            autoClose:false,
-            autoCloseDelay:3
-        })
+
     },
     methods:{
         showToast(){
-
+            this.$toast(`你是<strong>大帅逼</strong>?,帅气值为 ${parseInt(Math.random()*100)}`,{
+                position:'middle',
+                enableHtml:false,
+                closeButton:{
+                    text:'我是',
+                    callback(){
+                        console.log('两个大帅逼')
+                    }
+                },
+                autoClose:false,
+                autoCloseDelay:3
+            })
         }
     }
 })
