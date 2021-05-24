@@ -38,9 +38,18 @@ new Vue({
 
     },
     methods:{
-        showToast(){
+        showToast1(){
+            this.showToast('top')
+        },
+        showToast2(){
+            this.showToast('middle')
+        },
+        showToast3(){
+            this.showToast('bottom')
+        },
+        showToast(position){
             this.$toast(`你是<strong>大帅逼</strong>?,帅气值为 ${parseInt(Math.random()*100)}`,{
-                position:'bottom',
+                position,
                 enableHtml:false,
                 closeButton:{
                     text:'我是',
