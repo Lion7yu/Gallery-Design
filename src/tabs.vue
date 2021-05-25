@@ -37,7 +37,7 @@ export default {
       if(vm.$options.name === 'LTabsNav'){
         vm.$children.forEach((childVm)=>{
           if(childVm.$options.name === 'LTabsItem' && childVm.name === this.selected){
-            this.eventBus.$emit('update:selected',this.selected,item)
+            this.eventBus.$emit('update:selected',this.selected,childVm)
           }
         })
       }
