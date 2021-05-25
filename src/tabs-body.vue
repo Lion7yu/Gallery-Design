@@ -6,7 +6,10 @@
 
 <script>
 export default {
-  name:'LTabsBody'
+  name:'LTabsBody',
+  inject:['eventBus'],
+  created(){
+  }
 }
 </script>
 

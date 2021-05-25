@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import Vue from 'vue'
 export default {
   name:'LTabs',
   props:{
@@ -19,11 +20,20 @@ export default {
       validator(value){
         return ['horizontal','vertical'].indexOf(value) >= 0
       }
-
     }
   },
-  created(){
-    this.$emit('update:selected','xxx')
+  data(){
+    return{
+      eventBus:new Vue()
+    }
+  },
+  provide(){
+    return{
+      eventBus:this.eventBus
+    }
+  },
+  mounted(){
+    this.eventBus.$emit('update:selected',this.selected)
   }
 }
 </script>
