@@ -33,6 +33,10 @@ export default {
     }
   },
   mounted(){
+    if(this.$children.length === 0){
+      console && console.warn && 
+      console.warn('tabs 未添加子组件，tabs 子组件类型应为 tabs-nav 和 tabs-body.')
+    }
     this.$children.forEach((vm)=>{
       if(vm.$options.name === 'LTabsNav'){
         vm.$children.forEach((childVm)=>{
