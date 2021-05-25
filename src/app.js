@@ -57,8 +57,7 @@ new Vue({
                         console.log('两个大帅逼')
                     }
                 },
-                autoClose:false,
-                autoCloseDelay:3
+                autoClose:3,
             })
         }
     }
