@@ -35,8 +35,8 @@ export default {
   mounted(){
     this.$children.forEach((vm)=>{
       if(vm.$options.name === 'LTabsNav'){
-        vm.$children.forEach((item)=>{
-          if(item.$options.name === 'LTabsItem' && item.name === this.selected){
+        vm.$children.forEach((childVm)=>{
+          if(childVm.$options.name === 'LTabsItem' && childVm.name === this.selected){
             this.eventBus.$emit('update:selected',this.selected,item)
           }
         })
