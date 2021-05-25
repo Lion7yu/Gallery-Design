@@ -16,7 +16,6 @@ export default {
   },
   mounted(){
     this.$children.forEach((vm)=>{
-      console.log(vm.$options.name)
       if(vm.$options.name === 'LSider'){
         this.layoutClass.hasSider = true
       }
