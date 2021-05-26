@@ -32,20 +32,29 @@ export default {
       eventBus:this.eventBus
     }
   },
-  mounted(){
+  methods:{
+    checkChildren(){
     if(this.$children.length === 0){
       console && console.warn && 
       console.warn('tabs 未添加子组件，tabs 子组件类型应为 tabs-nav 和 tabs-body.')
-    }
-    this.$children.forEach((vm)=>{
-      if(vm.$options.name === 'LTabsNav'){
-        vm.$children.forEach((childVm)=>{
-          if(childVm.$options.name === 'LTabsItem' && childVm.name === this.selected){
-            this.eventBus.$emit('update:selected',this.selected,childVm)
-          }
-        })
       }
-    })
+    },
+    selectTab(){
+      this.$children.forEach((vm)=>{
+        if(vm.$options.name === 'LTabsNav'){
+          vm.$children.forEach((childVm)=>{
+            if(childVm.$options.name === 'LTabsItem' && childVm.name === this.selected){
+              this.eventBus.$emit('update:selected',this.selected,childVm)
+            }
+          })
+        }
+      })
+    }
+  },
+  mounted(){
+    this.checkChildren();
+    this.selectTab();
+
   }
 }
 </script>
