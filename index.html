@@ -40,19 +40,30 @@
 <body>
     <div id="app">
         <div style="overflow: hidden;padding: 50px;">
-            <g-popover>
+            <g-popover position="top">
                 <template slot="content">
                     <div>ZXxZxddddddddddddddddddddddddddddddddddddddddddddd</div>
                 </template>
                 <g-button>fuck me</g-button>
             </g-popover>
-            <g-popover>
+            <g-popover position="bottom">
                 <template slot="content">
                     <div>popover 内容</div>
                 </template>
                 <g-button>fuck me</g-button>
             </g-popover>
-
+            <g-popover position="left">
+                <template slot="content">
+                    <div>ZXxZxdddd</div>
+                </template>
+                <g-button>fuck me</g-button>
+            </g-popover>
+            <g-popover position="right">
+                <template slot="content">
+                    <div>ZXxZxdddd</div>
+                </template>
+                <g-button>fuck me</g-button>
+            </g-popover>
         </div>
     </div>
     <script src="./src/app.js"></script>
