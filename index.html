@@ -39,19 +39,21 @@
 
 <body>
     <div id="app" style="padding-top: 50px; padding-left: 50px; border:1px solid red">
-        <g-popover>
-            <template slot="content">
-                <div>popover 内容</div>
-            </template>
-            <button>fuck me</button>
-        </g-popover>
-        <g-popover>
-            <template slot="content">
-                <div>popover 内容</div>
-            </template>
-            <button>fuck me</button>
-        </g-popover>
+        <div style="overflow: hidden;">
+            <g-popover>
+                <template slot="content">
+                    <div>popover 内容</div>
+                </template>
+                <button>fuck me</button>
+            </g-popover>
+            <g-popover>
+                <template slot="content">
+                    <div>popover 内容</div>
+                </template>
+                <button>fuck me</button>
+            </g-popover>
 
+        </div>
     </div>
     <script src="./src/app.js"></script>
     <script src="//at.alicdn.com/t/font_2553651_un8xiv4m12.js"></script>

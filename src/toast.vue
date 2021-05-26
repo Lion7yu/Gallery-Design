@@ -78,7 +78,6 @@ export default {
       this.$destroy()
     },
     log(){
-      console.log('测试')
     },
     onClickClose(){
       this.close()
