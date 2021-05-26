@@ -38,35 +38,20 @@
 </head>
 
 <body>
-    <div id="app">
-        <!-- <g-tabs selected="selectedTab" @update:selected="selectedTab = $event"></g-tabs> -->
-        <g-tabs :selected.sync="selectedTab">
-            <g-tabs-nav>
-                <template slot="actions">
-                    <button>设置</button>
-                </template>
-                <g-tabs-item name="chinese">
-                    <g-icon name="settings"></g-icon>语文
-                </g-tabs-item>
-                <g-tabs-item name="math" disabled>
-                    数学
-                </g-tabs-item>
-                <g-tabs-item name='foreign'>
-                    外语
-                </g-tabs-item>
-            </g-tabs-nav>
-            <g-tabs-body>
-                <g-tabs-pane name="chinese">
-                    三国演义
-                </g-tabs-pane>
-                <g-tabs-pane name="math">
-                    勾股定理
-                </g-tabs-pane>
-                <g-tabs-pane name='foreign'>
-                    八嘎雅鹿
-                </g-tabs-pane>
-            </g-tabs-body>
-        </g-tabs>
+    <div id="app" style="padding-top: 50px; padding-left: 50px;">
+        <g-popover>
+            <template slot="content">
+                <div>popover 内容</div>
+            </template>
+            <button>fuck me</button>
+        </g-popover>
+        <g-popover>
+            <template slot="content">
+                <div>popover 内容</div>
+            </template>
+            <button>fuck me</button>
+        </g-popover>
+
     </div>
     <script src="./src/app.js"></script>
     <script src="//at.alicdn.com/t/font_2553651_un8xiv4m12.js"></script>
