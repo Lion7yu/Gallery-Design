@@ -41,8 +41,11 @@
     <div id="app" style="padding-left: 50px;">
         <div style="overflow: hidden;padding-top: 50px;padding-bottom: 40px;">
             <g-popover position="top">
-                <template slot="content">
+                <template slot="content" slot-scope="{close}">
                     <div>ZXxZxddddddddddddddddddddddddddddddddddddddddddddd</div>
+                    <div>ZXxZxddddddddddddddddddddddddddddddddddddddddddddd</div>
+                    <div>ZXxZxddddddddddddddddddddddddddddddddddddddddddddd</div>
+                    <g-button @click="close">关闭</g-button>
                 </template>
                 <g-button>fuck me</g-button>
             </g-popover>
