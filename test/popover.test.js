@@ -31,7 +31,31 @@ describe('Popover', () => { //it 用于隔离作用域
         const {contentWrapper} = vm.$refs.a.$refs
         expect(contentWrapper.classList.contains('position-bottom')).to.be.true
         done()
-        
       })
-    })      // vm.$destroy()
+    })
+    xit('可以设置 trigger',(done)=>{
+      Vue.component('g-popover',Popover)
+      const div = document.createElement('div')
+      document.body.appendChild(div)
+      div.innerHTML = `
+      <g-popover trigger="hover" ref="a">
+        <template slot="content">
+          弹出内容
+        </template>
+        <button>fuck me</button>
+      </g-popover>
+      `
+      const vm = new Vue({
+        el:div
+      })
+      setTimeout(()=>{
+        let event = new Event('mouseenter');
+        vm.$el.dispatchEvent(event)
+        vm.$nextTick(()=>{
+          const {contentWrapper} = vm.$refs.a.$refs
+          expect(contentWrapper).to.exist
+          done()
+        })
+      })
+    })
 })
